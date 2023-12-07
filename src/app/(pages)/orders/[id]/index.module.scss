@@ -4,6 +4,10 @@
   margin-bottom: var(--block-padding);
 }
 
+.padding {
+  padding-top: 1.5rem;
+}
+
 .id {
   word-break: break-all;
 }
@@ -58,7 +62,7 @@
   max-width: 200px;
 
   @include small-break {
-    max-width: unset;
+    max-width: 75%;
     margin-bottom: calc(var(--base) / 2);
   }
 }
@@ -89,10 +93,10 @@
   position: relative;
   aspect-ratio: 5 / 4;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
 
   @include small-break {
-    max-width: unset;
+    max-width: 75%;
     margin-bottom: calc(var(--base) / 2);
   }
 }
@@ -104,7 +108,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .title {

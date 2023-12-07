@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { Settings } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
 
+import classes from './index.module.scss'
+
 export const LogoutPage: React.FC<{
   settings: Settings
 }> = props => {
@@ -31,19 +33,23 @@ export const LogoutPage: React.FC<{
   return (
     <Fragment>
       {(error || success) && (
-        <div>
+        <div className={classes.padding}>
           <h1>{error || success}</h1>
-          <p>
+          <p className={classes.padding}>
             {'What would you like to do next?'}
             {typeof productsPage === 'object' && productsPage?.slug && (
               <Fragment>
-                {' '}
-                <Link href={`/${productsPage.slug}`}>Click here</Link>
+                {' '} <br />
+                <Link href={`/${productsPage.slug}`} className={classes.link}>
+                  Click here
+                </Link>
                 {` to shop.`}
               </Fragment>
-            )}
+            )} <br />
             {` To log back in, `}
-            <Link href="/login">click here</Link>
+            <Link href="/login" className={classes.link}>
+              click here
+            </Link>
             {'.'}
           </p>
         </div>

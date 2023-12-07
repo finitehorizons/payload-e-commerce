@@ -47,13 +47,9 @@ export default async function Order({ params: { id } }) {
 
   return (
     <Gutter className={classes.orders}>
-      <h1>
-        {`Order`}
-        <span className={classes.id}>{`${order.id}`}</span>
-      </h1>
+      <h2>Your order</h2>
       <div className={classes.itemMeta}>
-        <p>{`ID: ${order.id}`}</p>
-        <p>{`Payment Intent: ${order.stripePaymentIntentID}`}</p>
+        <p className={classes.padding}>{`ID: ${order.id}`}</p>
         <p>{`Ordered On: ${formatDateTime(order.createdAt)}`}</p>
         <p className={classes.total}>
           {'Total: '}

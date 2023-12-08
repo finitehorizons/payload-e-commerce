@@ -5,7 +5,6 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import canUseDOM from '../../_utilities/canUseDOM'
 import { defaultTheme, getImplicitPreference, themeLocalStorageKey } from './shared'
 import { Theme, ThemeContextType, themeIsValid } from './types'
-import { defaultConfig } from 'next/dist/server/config-shared'
 
 const initialContext: ThemeContextType = {
   theme: undefined,

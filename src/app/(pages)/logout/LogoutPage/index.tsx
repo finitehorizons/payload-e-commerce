@@ -39,13 +39,15 @@ export const LogoutPage: React.FC<{
             {'What would you like to do next?'}
             {typeof productsPage === 'object' && productsPage?.slug && (
               <Fragment>
-                {' '} <br />
+                {' '}
+                <br />
                 <Link href={`/${productsPage.slug}`} className={classes.link}>
                   Click here
                 </Link>
                 {` to shop.`}
               </Fragment>
-            )} <br />
+            )}{' '}
+            <br />
             {` To log back in, `}
             <Link href="/login" className={classes.link}>
               click here

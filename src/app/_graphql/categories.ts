@@ -1,4 +1,3 @@
-
 export const PRODUCT_CATEGORIES = `categories {
   title
   id
